@@ -12,7 +12,13 @@ class ProfilePage extends StatelessWidget {
           color: Colors.black,
           child: Stack(
             children: [
-              FractionallySizedBox(),
+              FractionallySizedBox(
+                heightFactor: 0.5,
+                child: Image.asset(
+                  "assets/images/background.jpeg",
+                  // fit: BoxFit.cover,
+                ),
+              ),
               FractionallySizedBox(),
               ClipOval()
             ],
