@@ -19,8 +19,43 @@ class ProfilePage extends StatelessWidget {
                   // fit: BoxFit.cover,
                 ),
               ),
-              FractionallySizedBox(),
-              ClipOval()
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: FractionallySizedBox(
+                  heightFactor: 0.35,
+                  child: Column(
+                    children: const [
+                      Text(
+                        "Hi! I'm Edgar!",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 50,
+                          fontFamily: "cursive",
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      SizedBox(height: 15),
+                      Text(
+                        "I'm a programmer!\nI like Holiday",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontFamily: "sans-serif-medium",
+                            fontWeight: FontWeight.w300),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 20),
+                      Divider(
+                        height: 1.5,
+                        color: Colors.white,
+                        indent: 40,
+                        endIndent: 40,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const ClipOval()
             ],
           ),
         ),
