@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -24,8 +25,8 @@ class ProfilePage extends StatelessWidget {
                 child: FractionallySizedBox(
                   heightFactor: 0.35,
                   child: Column(
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         "Hi! I'm Edgar!",
                         style: TextStyle(
                           color: Colors.white,
@@ -34,8 +35,8 @@ class ProfilePage extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(height: 15),
-                      Text(
+                      const SizedBox(height: 15),
+                      const Text(
                         "I'm a programmer!\nI like Holiday",
                         style: TextStyle(
                             color: Colors.white,
@@ -44,12 +45,48 @@ class ProfilePage extends StatelessWidget {
                             fontWeight: FontWeight.w300),
                         textAlign: TextAlign.center,
                       ),
-                      SizedBox(height: 20),
-                      Divider(
+                      const SizedBox(height: 20),
+                      const Divider(
                         height: 1.5,
                         color: Colors.white,
                         indent: 40,
                         endIndent: 40,
+                      ),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          ClipOval(
+                            child: SizedBox(
+                              width: 80,
+                              height: 80,
+                              child: MaterialButton(
+                                onPressed: () {},
+                                child: const Icon(Icons.email),
+                              ),
+                            ),
+                          ),
+                          ClipOval(
+                            child: SizedBox(
+                              width: 80,
+                              height: 80,
+                              child: MaterialButton(
+                                onPressed: () {},
+                                child: const Icon(Icons.email),
+                              ),
+                            ),
+                          ),
+                          ClipOval(
+                            child: SizedBox(
+                              width: 80,
+                              height: 80,
+                              child: MaterialButton(
+                                onPressed: () {},
+                                child: const Icon(Icons.email),
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                     ],
                   ),
