@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:profile_app/avatar.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -15,7 +16,7 @@ class ProfilePage extends StatelessWidget {
             children: [
               _createBackground(),
               _createContents(),
-              const ClipOval()
+              _createAvatar(),
             ],
           ),
         ),
@@ -26,7 +27,7 @@ class ProfilePage extends StatelessWidget {
     return FractionallySizedBox(
       heightFactor: 0.5,
       child: Image.asset(
-        "assets/images/background.jpeg",
+        "assets/images/background.png",
         // fit: BoxFit.cover,
       ),
     );
@@ -36,20 +37,21 @@ class ProfilePage extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomCenter,
       child: FractionallySizedBox(
-        heightFactor: 0.37,
+        heightFactor: 0.5,
         child: Column(
           children: [
+            const SizedBox(height: 70),
             _createIntroduce(),
-            const SizedBox(height: 15),
+            const SizedBox(height: 10),
             _createMessage(),
             const SizedBox(height: 20),
             const Divider(
               height: 1.5,
               color: Colors.white,
-              indent: 40,
-              endIndent: 40,
+              indent: 10,
+              endIndent: 10,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -113,6 +115,12 @@ class ProfilePage extends StatelessWidget {
           fontFamily: "sans-serif-medium",
           fontWeight: FontWeight.w300),
       textAlign: TextAlign.center,
+    );
+  }
+
+  Widget _createAvatar() {
+    return const Align(
+      child: Avatar(),
     );
   }
 }

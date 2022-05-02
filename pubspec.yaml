@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+  url_launcher: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -24,7 +25,9 @@ flutter:
 
   uses-material-design: true
   assets:
-    - assets/images/background.jpeg
+    - assets/images/background.png
     - assets/images/blog.png
     - assets/images/email.png
     - assets/images/github.png
+    - assets/images/avatar1.jpeg
+    - assets/images/avatar2.jpeg
