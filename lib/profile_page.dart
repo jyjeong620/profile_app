@@ -57,45 +57,49 @@ class ProfilePage extends StatelessWidget {
               endIndent: 10,
             ),
             const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ClipOval(
-                  child: SizedBox(
-                    width: 70,
-                    height: 70,
-                    child: MaterialButton(
-                      onPressed: () =>_launchUrl(Uri.parse("https://crimson-hockey-9b5.notion.site/71a123d754e8450b883d177cbb7b057b")),
-                      child: Image.asset("assets/images/blog.png")
-                    ),
-                  ),
-                ),
-                ClipOval(
-                  child: SizedBox(
-                    width: 70,
-                    height: 70,
-                    child: MaterialButton(
-                      onPressed: () => _launchUrl(Uri.parse("https://github.com/jyjeong620")),
-                        child: Image.asset("assets/images/github.png")
-                    ),
-                  ),
-                ),
-                ClipOval(
-                  child: SizedBox(
-                    width: 70,
-                    height: 70,
-                    child: MaterialButton(
-                        onPressed: () => _launchUrl(Uri.parse("mailto:jeongjy620@gmail.com")),
-                        child: Image.asset("assets/images/email.png")
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            _createLink(),
             const SizedBox(height: 20),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _createLink() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        ClipOval(
+          child: SizedBox(
+            width: 70,
+            height: 70,
+            child: MaterialButton(
+                onPressed: () =>_launchUrl(Uri.parse("https://crimson-hockey-9b5.notion.site/71a123d754e8450b883d177cbb7b057b")),
+                child: Image.asset("assets/images/blog.png")
+            ),
+          ),
+        ),
+        ClipOval(
+          child: SizedBox(
+            width: 70,
+            height: 70,
+            child: MaterialButton(
+                onPressed: () => _launchUrl(Uri.parse("https://github.com/jyjeong620")),
+                child: Image.asset("assets/images/github.png")
+            ),
+          ),
+        ),
+        ClipOval(
+          child: SizedBox(
+            width: 70,
+            height: 70,
+            child: MaterialButton(
+                onPressed: () => _launchUrl(Uri.parse("mailto:jeongjy620@gmail.com")),
+                child: Image.asset("assets/images/email.png")
+            ),
+          ),
+        ),
+      ],
     );
   }
 
