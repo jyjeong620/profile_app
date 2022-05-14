@@ -43,8 +43,8 @@ class _AvatarState extends State<Avatar> {
       height: _imageSize,
       child: AnimatedCrossFade(
         duration: const Duration(milliseconds: 300),
-        firstChild: Image.asset("assets/images/avatar1.jpeg"),
-        secondChild: Image.asset("assets/images/avatar2.jpeg"),
+        firstChild: Image.asset("assets/images/avatar1.jpeg", height: 140, fit: BoxFit.fitHeight,),
+        secondChild: Image.asset("assets/images/avatar2.jpeg", height: 110, fit: BoxFit.fitHeight,),
         crossFadeState: _imageIndex.isOdd
             ? CrossFadeState.showFirst
             : CrossFadeState.showSecond,
