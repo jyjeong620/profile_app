@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:profile_app/avatar.dart';
-// import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
+
+
+  void _launchUrl(Uri _url) async {
+    if (!await launchUrl(_url)) throw 'Could not launch $_url';
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +65,7 @@ class ProfilePage extends StatelessWidget {
                     width: 70,
                     height: 70,
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () =>_launchUrl(Uri.parse("https://crimson-hockey-9b5.notion.site/71a123d754e8450b883d177cbb7b057b")),
                       child: Image.asset("assets/images/blog.png")
                     ),
                   ),
@@ -70,7 +75,7 @@ class ProfilePage extends StatelessWidget {
                     width: 70,
                     height: 70,
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () => _launchUrl(Uri.parse("https://github.com/jyjeong620")),
                         child: Image.asset("assets/images/github.png")
                     ),
                   ),
@@ -80,7 +85,7 @@ class ProfilePage extends StatelessWidget {
                     width: 70,
                     height: 70,
                     child: MaterialButton(
-                        onPressed: () {},
+                        onPressed: () => _launchUrl(Uri.parse("mailto:jeongjy620@gmail.com")),
                         child: Image.asset("assets/images/email.png")
                     ),
                   ),
